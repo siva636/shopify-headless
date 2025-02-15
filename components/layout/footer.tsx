@@ -1,19 +1,24 @@
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
-  return (
-    <div className='mt-5'>
-      <hr />
-      <div className='p-1 text-center text-gray-400 text-sm'>
-        <a href='https://github.com/siva636'>GitHub</a>
-      </div>
-    </div>
-  );
-  // const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   // const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
   // const skeleton = 'w-full h-6 animate-pulse rounded-sm bg-neutral-200 dark:bg-neutral-700';
   // const menu = await getMenu('next-js-frontend-footer-menu');
   // const copyrightName = COMPANY_NAME || SITE_NAME || '';
+
+  return (
+    <div className='mt-5'>
+      <hr className='border-neutral-200 dark:border-neutral-600' />
+      <div className='pt-1 pb-10 text-center text-gray-400 text-sm'>
+        <a href='https://github.com/siva636'>
+          &copy;{currentYear} GitHub/siva636
+        </a>{' '}
+        &nbsp; | &nbsp;{' '}
+        <a href='https://github.com/siva636/shopify-headless'>View source</a>
+      </div>
+    </div>
+  );
 
   // return (
   //   <footer className="text-sm text-neutral-500 dark:text-neutral-400">
