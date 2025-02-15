@@ -3,6 +3,8 @@
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
 
+@config '../tailwind.config.js';
+
 @layer base {
   *,
   ::after,
